@@ -41,7 +41,8 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-.hex-color-value {
+.hex-color-value,
+.rgb-color-value {
   font-size: 30px;
   font-weight: bold;
   color: #fff;
