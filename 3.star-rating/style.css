@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 1rem;
+  text-align: center;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.star-rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.fa-star-o::before {
+  content: "\f006";
+  size: 50px;
+}
+.selected-rating-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.selected-rating-container p {
+  font-size: 20px;
+  font-weight: bold;
+}
