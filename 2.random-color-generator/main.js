@@ -17,3 +17,22 @@ HexBtn.addEventListener("click", () => {
   HexBtn.style.color = `#${hexColorOutput}`;
   console.log(hexColorOutput);
 });
+
+//RGB Color Generator
+
+const rgbBtn = document.querySelector(".rgb-btn");
+const getRedInputRange = document.querySelector("#red");
+const getGreenInputRange = document.querySelector("#green");
+const getBlueInputRange = document.querySelector("#blue");
+const rgbColorContainer = document.querySelector(".rgb-color-container");
+const rgbColorValue = document.querySelector(".rgb-color-value");
+
+rgbBtn.addEventListener("click", () => {
+  let extractRedValue = getRedInputRange.value;
+  let extractGreenValue = getGreenInputRange.value;
+  let extractBlueValue = getBlueInputRange.value;
+  const rgbColor = `rgb(${extractRedValue},${extractGreenValue},${extractBlueValue})`;
+  rgbColorValue.textContent = rgbColor;
+  rgbColorContainer.style.backgroundColor = rgbColor;
+  rgbBtn.style.color = rgbColor;
+});
