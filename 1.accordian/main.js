@@ -24,3 +24,44 @@ const data = [
       "Yes of course, it is very possible to create an accordion component with another framework.",
   },
 ];
+
+const accordianWrapper = document.querySelector(".accordian");
+
+function createAccordianData() {
+  accordianWrapper.innerHTML = data
+    .map(
+      (dataItem) => `
+    <div class = "accordian_item">
+    <div class = "accordian_title">
+    <h3>${dataItem.question}</h3>
+    <i class="fa-solid fa-arrow-down"></i>
+    </div>
+    <div class="accordian_content">
+    <p>${dataItem.answer}</p>
+    </div>
+    </div>
+    `
+    )
+    .join(" ");
+}
+
+createAccordianData();
+
+const getAccordianTitles = document.querySelectorAll(".accordian_title");
+
+console.log(getAccordianTitles);
+
+getAccordianTitles.forEach((currentItem) => {
+  currentItem.addEventListener("click", (event) => {
+    if (currentItem.classList.contains("active")) {
+      currentItem.classList.remove("active");
+    } else {
+      let getAlreadyAddedActiveClasses = document.querySelectorAll(".active");
+      getAlreadyAddedActiveClasses.forEach((currentActiveItem) => {
+        currentActiveItem.classList.remove("active");
+      });
+
+      currentItem.classList.add("active");
+    }
+  });
+});
