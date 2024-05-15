@@ -29,6 +29,13 @@ function fetchUsingFetchMethod() {
     .catch((e) => console.log(e));
 }
 
+// Fetch using async await method
+
+async function fetchUsingAsyncAwaitMethod() {
+  const response = await fetch(url, { method: "GET" });
+  const result = await response.json();
+  displayResults(result);
+}
 function displayResults(posts) {
   postsListContainer.innerHTML = posts
     .map(
@@ -41,4 +48,6 @@ function displayResults(posts) {
 
 // fetchUsingXHR();
 
-fetchUsingFetchMethod();
+// fetchUsingFetchMethod();
+
+fetchUsingAsyncAwaitMethod();
