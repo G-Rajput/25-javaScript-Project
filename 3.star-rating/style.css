@@ -20,9 +20,15 @@ body {
   align-items: center;
   margin: 30px;
 }
+.star-rating-container i {
+  font-size: 40px;
+}
 .fa-star-o::before {
   content: "\f006";
-  size: 50px;
+}
+.fa-star {
+  content: \f005;
+  color: #015659;
 }
 .selected-rating-container {
   display: flex;
