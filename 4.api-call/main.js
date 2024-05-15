@@ -1,10 +1,12 @@
 const postsListContainer = document.querySelector(".posts-list-container");
 
+const url = "https://jsonplaceholder.typicode.com/posts";
+
 // Fetch using XHR
 
 function fetchUsingXHR() {
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
+  xhr.open("GET", url);
   xhr.responseType = "json";
   xhr.send();
 
@@ -17,6 +19,16 @@ function fetchUsingXHR() {
   };
 }
 
+//Fetch using fetch method
+
+function fetchUsingFetchMethod() {
+  const fetchRequest = fetch(url, { method: "GET" });
+  fetchRequest
+    .then((response) => response.json())
+    .then((result) => displayResults(result))
+    .catch((e) => console.log(e));
+}
+
 function displayResults(posts) {
   postsListContainer.innerHTML = posts
     .map(
@@ -27,4 +39,6 @@ function displayResults(posts) {
     .join(" ");
 }
 
-fetchUsingXHR();
+// fetchUsingXHR();
+
+fetchUsingFetchMethod();
