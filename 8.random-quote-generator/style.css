@@ -25,3 +25,14 @@
   font-size: 18px;
   border-radius: 0.5rem;
 }
+.loader {
+  font-size: 30px;
+  font-weight: bolder;
+  display: none;
+}
+.loader.show {
+  display: block;
+}
+.quote-wrapper.hide {
+  display: none;
+}
