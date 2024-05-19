@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 15px;
+}
+.filter-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0px;
+}
+.filter-buttons-wrapper button {
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.content-wrapper .card {
+  width: 32%;
+  padding: 30px;
+  background-color: #015659;
+  color: #fff;
+  font-size: 30px;
+  margin: 1rem;
+}
+.hide {
+  display: none;
+}
