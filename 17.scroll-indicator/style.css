@@ -27,7 +27,7 @@ body {
   background-color: black;
   width: 0%;
 }
-.post-container {
+.posts-container {
   margin: 40px auto 0px auto;
   padding-top: 40px;
   display: flex;

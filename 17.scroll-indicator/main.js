@@ -33,3 +33,18 @@ function displayPostList(getposts) {
 }
 
 fetchListOfPosts();
+
+window.onscroll = function () {
+  handleScroll();
+};
+
+function handleScroll() {
+  const getScrollFromTop =
+    document.body.scrollTop || document.documentElement.scrollTop;
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const howMuchpercentageAlreadyScrolled = (getScrollFromTop / height) * 100;
+  progressBar.style.width = `${howMuchpercentageAlreadyScrolled}%`;
+}
